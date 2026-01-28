@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Digest — Week of Jan 22-28, 2026</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      color: #1a1a1a;
+      background: #fafafa;
+    }
+    h1 {
+      font-size: 2.2em;
+      border-bottom: 3px solid #6366f1;
+      padding-bottom: 10px;
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #6366f1;
+      margin-top: 40px;
+      border-left: 4px solid #6366f1;
+      padding-left: 12px;
+    }
+    h3 {
+      font-size: 1.15em;
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+    h3 a { color: inherit; text-decoration: none; }
+    h3 a:hover { color: #6366f1; }
+    .source {
+      font-size: 0.85em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .source a { color: #6366f1; }
+    p { margin: 10px 0; }
+    ul { margin: 10px 0; padding-left: 25px; }
+    li { margin: 5px 0; }
+    strong { color: #1a1a1a; }
+    blockquote {
+      border-left: 3px solid #ddd;
+      margin: 15px 0;
+      padding: 10px 20px;
+      background: #f5f5f5;
+      font-style: italic;
+      color: #555;
+    }
+    code {
+      background: #e5e7eb;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
+    .highlight {
+      background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+      padding: 2px 4px;
+    }
+    .section-ai { border-color: #10b981; }
+    .section-ai h2 { color: #10b981; border-color: #10b981; }
+    .section-dev { border-color: #3b82f6; }
+    .section-dev h2 { color: #3b82f6; border-color: #3b82f6; }
+    .section-indie { border-color: #f59e0b; }
+    .section-indie h2 { color: #f59e0b; border-color: #f59e0b; }
+    .section-thinking { border-color: #8b5cf6; }
+    .section-thinking h2 { color: #8b5cf6; border-color: #8b5cf6; }
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+    @media print {
+      body { background: white; padding: 20px; }
+      h2 { page-break-after: avoid; }
+      h3 { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>📰 News Digest</h1>
+<p class="subtitle">Week of Jan 22-28, 2026 • Curated for builders, thinkers, and indie hackers</p>
+
+<hr>
+
+<section class="section-ai">
+<h2>🤖 AI & LLMs</h2>
+
+<h3>Kimi K2.5 Drops — Beats Sonnet 4.5 at Half the Cost</h3>
+<p class="source"><a href="https://www.latent.space/p/ainews-moonshot-kimi-k25-beats-sonnet">Latent Space</a> · <a href="https://simonwillison.net/2026/Jan/27/kimi-k25/">Simon Willison</a></p>
+<p>Moonshot's Kimi K2.5 is a huge release:</p>
+<ul>
+  <li><strong>1 trillion parameter</strong> open weight model (32B active, 384 experts)</li>
+  <li><strong>Native multimodal</strong> — first K model with image AND video understanding</li>
+  <li><strong>100 parallel agent swarm</strong> — can orchestrate up to 100 sub-agents with 1,500 tool calls</li>
+  <li>Claims SOTA on agentic benchmarks (HLE, BrowseComp), open source SOTA for vision/coding</li>
+  <li>Upload a screen recording → it reconstructs the website</li>
+</ul>
+<blockquote>"Simply upload a screen recording and K2.5 can reconstruct the website for you"</blockquote>
+
+<h3>One Human + One Agent = One Browser From Scratch</h3>
+<p class="source"><a href="https://simonwillison.net/2026/Jan/27/one-human-one-agent-one-browser/">Simon Willison</a></p>
+<p>Someone was so annoyed by Cursor's hype (1.6M lines of Rust, thousands of agents) that they built a web browser with:</p>
+<ul>
+  <li><strong>Single Codex CLI agent</strong></li>
+  <li><strong>3 days of work</strong></li>
+  <li><strong>20,000 lines of Rust</strong></li>
+  <li><strong>1MB binary</strong> that actually renders HTML+CSS</li>
+</ul>
+<blockquote>"The best way to show an agent how you like something to be done is to have it look at an example."</blockquote>
+
+<h3>OpenAI: Codex Agent Loop Deep Dive</h3>
+<p class="source"><a href="https://openai.com/index/unrolling-the-codex-agent-loop">OpenAI Blog</a></p>
+<p>Technical deep dive into how Codex CLI orchestrates models, tools, prompts, and performance. Essential reading for anyone building agents.</p>
+
+<h3>OpenAI Launches Prism</h3>
+<p class="source"><a href="https://openai.com/index/introducing-prism">OpenAI Blog</a></p>
+<p>Free LaTeX-native workspace with GPT-5.2 built in for researchers. Write, collaborate, and reason in one place.</p>
+
+<h3>Tips for Getting Coding Agents to Write Good Tests</h3>
+<p class="source"><a href="https://simonwillison.net/2026/Jan/26/tests/">Simon Willison</a></p>
+<ul>
+  <li><strong>Existing patterns matter most</strong> — agents imitate your codebase</li>
+  <li>Use <code>pytest.mark.parametrize</code> and fixtures to reduce duplication</li>
+  <li>Point agents at example repos: "Clone X and imitate its testing patterns"</li>
+</ul>
+
+<h3>Qwen3-TTS Released — Full Open Source Family</h3>
+<p class="source"><a href="https://www.reddit.com/r/LocalLLaMA/comments/1qjul5t/">r/LocalLLaMA</a></p>
+<p>Qwen open-sourced their complete TTS family: VoiceDesign, CustomVoice, and Base models. 5 models (0.6B & 1.8B sizes), support for 10 languages.</p>
+</section>
+
+<hr>
+
+<section class="section-dev">
+<h2>💻 Dev & Infrastructure</h2>
+
+<h3>AGENTS.md Outperforms Skills in Agent Evals</h3>
+<p class="source"><a href="https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals">Vercel Blog</a></p>
+<p>Vercel's research on teaching coding agents:</p>
+<ul>
+  <li><strong>Skills</strong> (invocable docs packages): 53% pass rate, same as no docs</li>
+  <li><strong>AGENTS.md</strong> (8KB compressed docs in root): <strong>100% pass rate</strong></li>
+  <li>Skills weren't triggered reliably (56% never invoked)</li>
+</ul>
+<p><strong>Takeaway:</strong> Put framework docs directly in AGENTS.md, don't rely on agents to invoke skills.</p>
+
+<h3>Rust at Scale: WhatsApp Security</h3>
+<p class="source"><a href="https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/">Meta Engineering</a> · 169 points on HN</p>
+<p>How WhatsApp is using Rust for security at scale. Memory safety benefits at Meta's scale.</p>
+
+<h3>Make.ts — Build System in TypeScript</h3>
+<p class="source"><a href="https://matklad.github.io/2026/01/27/make-ts.html">matklad</a> · 159 points on HN</p>
+<p>matklad (of rust-analyzer fame) on using TypeScript as a build system. Replacing Make with something more expressive.</p>
+
+<h3>Parametric CAD in Rust</h3>
+<p class="source"><a href="https://campedersen.com/vcad">campedersen</a> · 203 points on HN</p>
+<p>New parametric CAD system built in Rust. Beautiful browser-based interactive visualizations.</p>
+
+<h3>Lennart Poettering Founded a New Company</h3>
+<p class="source"><a href="https://amutable.com/about">Amutable</a> · 343 points, 532 comments</p>
+<p>The systemd and Linux kernel maintainers started a company called Amutable. HN having opinions.</p>
+</section>
+
+<hr>
+
+<section class="section-indie">
+<h2>🚀 Indie Hacking & Building</h2>
+
+<h3>Building an App Portfolio to $60k/mo</h3>
+<p class="source"><a href="https://www.indiehackers.com/post/tech/building-an-app-portfolio-to-60k-mo-after-apple-froze-his-developer-account-LD7oNYzKSmWucRfKV1AO">Indie Hackers</a></p>
+<p>After Apple froze their developer account, they pivoted and built a portfolio hitting $60k/mo.</p>
+
+<h3>From Open Source Donations to $13k MRR</h3>
+<p class="source"><a href="https://www.indiehackers.com/post/tech/from-open-source-donations-to-13k-mrr-product-rl7FbRceFPj4ZvI0nGoV">Indie Hackers</a></p>
+<p>Andris Reinman (of Nodemailer fame) built a monetized product on top of open source. Good lessons on the OSS → product pipeline.</p>
+
+<h3>SearchCans: SerpApi Alternative for $0.56/1k</h3>
+<p class="source"><a href="https://www.indiehackers.com/product/searchcans">Indie Hackers</a></p>
+<p>Couldn't afford SerpApi ($10/1k searches), so built a $0.56 alternative. Classic indie hacker move.</p>
+</section>
+
+<hr>
+
+<section class="section-thinking">
+<h2>🧠 Thinking & Strategy</h2>
+
+<h3>Ray Kroc / McDonald's — Farnam Street Outliers</h3>
+<p class="source"><a href="https://fs.blog/knowledge-project-podcast/outliers-ray-kroc/">Farnam Street</a></p>
+<ul>
+  <li>"I was an overnight success all right. But thirty years is a long, long night."</li>
+  <li>"As long as you're green, you're growing. As soon as you're ripe, you start to rot."</li>
+  <li>Invention is not enough. <strong>Replication at scale is its own kind of genius.</strong></li>
+</ul>
+
+<h3>Morgan Housel: Wealth = What You Have − What You Want</h3>
+<p class="source"><a href="https://fs.blog/knowledge-project-podcast/morgan-housel-3/">Farnam Street</a></p>
+<p>Skills to <strong>get</strong> rich ≠ skills to <strong>stay</strong> rich. Why "boring" investing beats everything.</p>
+
+<h3>Stratechery: TSMC Risk</h3>
+<p class="source"><a href="https://stratechery.com/2026/tsmc-risk/">Stratechery</a></p>
+<p>Ben Thompson on why the AI industry's dependency on Taiwan/TSMC is an existential risk. If hyperscalers don't build competitors, they'll "forego billions of dollars in revenue and stunt the AI revolution."</p>
+
+<h3>Browser Agent Verification Layer</h3>
+<p class="source"><a href="https://sentienceapi.com/blog/verification-layer-amazon-case-study">SentienceAPI</a></p>
+<p>Local ~3B LLM completing Amazon shopping flow reliably using DOM pruning, planner/executor split, and Jest-style assertions per step.</p>
+<blockquote>"Reliability in agents comes from verification, not just scaling model size."</blockquote>
+</section>
+
+<hr>
+
+<h2>🔗 Quick Links</h2>
+<ul>
+  <li><strong>Amazon</strong> cuts 16,000 jobs in AI/efficiency push</li>
+  <li><strong>OpenAI</strong> launching "Edu for Countries" and "Horizon 1000" ($50M with Gates Foundation)</li>
+  <li><strong>Airfoil</strong> — Another incredible <a href="https://ciechanow.ski/airfoil/">interactive explainer</a> from Bartosz Ciechanowski</li>
+  <li><strong>The HN Arcade</strong> — <a href="https://andrewgy8.github.io/hnarcade/">Directory</a> of all games posted to Hacker News</li>
+</ul>
+
+<div class="footer">
+  <p>Curated with 🤖 by Moltbot • <a href="https://skillbites.xyz">skillbites.xyz</a></p>
+</div>
+
+</body>
+</html>
